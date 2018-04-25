@@ -71,8 +71,7 @@ def main():
             repo_user=args.repo_user,
             repo_name=args.repo_name,
             addons=addons_text,
-            commitlink='[{commit}](https://github.com/{user}/{repo}/commit/{commit})'.format(
-                user=args.repo_user, repo=args.repo_name, commit=args.commit_hash),
+            commit=args.commit_hash,
             repo_addon_link=repo_addon_link,
         ))
 
