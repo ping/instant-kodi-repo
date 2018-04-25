@@ -20,6 +20,10 @@ def main():
     parser.add_argument(
         '--template', '-t', default='templates/repo.readme.md.tmpl',
         help='Path to the README.md template file')
+    parser.add_argument(
+        '--datadir', '-d', default='datadir',
+        help='datadir path for the repo')
+
     args = parser.parse_args()
 
     if not os.path.isfile(args.addonsxml_path):
@@ -45,8 +49,8 @@ def main():
         addon_id = addon.get('id')
         addon_nm = addon.get('name')
         addon_ver = addon.get('version')
-        plugin_zip_link = 'datadir/{id}/{id}-{ver}.zip'.format(
-            id=addon_id, ver=addon_ver)
+        plugin_zip_link = '{datadir}/{id}/{id}-{ver}.zip'.format(
+            id=addon_id, ver=addon_ver, datadir=args.datadir)
         addons.append(
             Addon(addon_id, addon_nm, addon_ver, plugin_zip_link)
         )

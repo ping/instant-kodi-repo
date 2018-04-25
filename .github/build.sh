@@ -16,6 +16,8 @@ SHA=`git rev-parse --verify HEAD`
 REPO_USER=$(echo "$TRAVIS_REPO_SLUG" | grep -Eo '^([^/]+)')
 REPO_NAME=$(echo "$TRAVIS_REPO_SLUG" | grep -Eo '([^/]+)$')
 
+DATADIR='datadir'
+
 git clone --quiet $REPO $BUILD_DIR
 
 cd $BUILD_DIR
@@ -25,7 +27,7 @@ cd $CWD
 # Clean out existing contents
 rm -rf $BUILD_DIR/* || exit 0
 
-python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/" -t ".github/templates/repo.addon.xml.tmpl"
+python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/" -t ".github/templates/repo.addon.xml.tmpl" -d "$DATADIR"
 
 # Do our repo build
 plugin_sources=''
@@ -44,12 +46,11 @@ create_repository_py='.github/create_repository.py'
 
 wget -O "$create_repository_py" "$create_repo_script_url" || curl -o "$create_repository_py" "$create_repo_script_url"
 
-# the datadir/ path is also hardcoded in build_repo_addon.py
-mkdir -p "$BUILD_DIR/datadir/"
-python "$create_repository_py" -d "$BUILD_DIR/datadir/" -i "$BUILD_DIR/addons.xml" -c "$BUILD_DIR/addons.xml.md5" $plugin_sources
+mkdir -p "$BUILD_DIR/$DATADIR/"
+python "$create_repository_py" -d "$BUILD_DIR/$DATADIR/" -i "$BUILD_DIR/addons.xml" -c "$BUILD_DIR/addons.xml.md5" $plugin_sources
 
 # Generate readme.md
-python .github/build_readme.py "$REPO_USER" "$REPO_NAME" "$BUILD_DIR/addons.xml" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md"
+python .github/build_readme.py "$REPO_USER" "$REPO_NAME" "$BUILD_DIR/addons.xml" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md" -d "$DATADIR"
 
 cd $BUILD_DIR
 git config user.name "Travis CI"

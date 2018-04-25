@@ -11,6 +11,9 @@ def main():
     parser.add_argument(
         '--template', '-t', default='templates/repo.addon.xml.tmpl',
         help='Path to the addon.xml template file')
+    parser.add_argument(
+        '--datadir', '-d', default='datadir',
+        help='datadir path for the repo')
 
     args = parser.parse_args()
 
@@ -45,7 +48,8 @@ def main():
                 args.repo_user, args.repo_name),
             repo_info_checksum_url='https://{}.github.io/{}/addons.xml.md5'.format(
                 args.repo_user, args.repo_name),
-            repo_info_datadir_url='https://{}.github.io/{}/datadir/'.format(args.repo_user, args.repo_name),
+            repo_info_datadir_url='https://{}.github.io/{}/{}/'.format(
+                args.repo_user, args.repo_name, args.datadir),
             repo_addon_summary='A personal Kodi addon repository from https://github.com/{}/{}'.format(
                 args.repo_user, args.repo_name)
         ))
