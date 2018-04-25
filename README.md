@@ -43,7 +43,7 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
 1. Use ``travis`` to encrypt your ``deploy_key`` and save the encrypted key as ``.github/deploy_key.enc``
     ```bash
     # or go to where your repo folder is
-    cd my_kodi_repo
+    cd my_kodi_repo && rm .github/deploy_key.enc
     travis encrypt-file deploy_key .github/deploy_key.enc
     ```
     You should see something like
