@@ -2,6 +2,9 @@
 
 _Almost_ instant but not quite (/understatement)
 
+
+[![Travis](https://img.shields.io/travis/ping/instant-kodi-repo.svg?style=flat-square)](https://travis-ci.org/ping/instant-kodi-repo/)
+
 ## Features
 - Auto generates your personal Kodi addon repository hosted on GitHub
 - Auto updates everytime you update your addon code
