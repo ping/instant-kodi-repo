@@ -5,7 +5,7 @@ import xml.etree.ElementTree
 from collections import namedtuple
 
 
-Addon = namedtuple('Addon', ['id', 'name', 'zip'])
+Addon = namedtuple('Addon', ['id', 'name', 'version', 'zip'])
 
 
 def main():
@@ -32,6 +32,13 @@ def main():
 
     tree = xml.etree.ElementTree.parse(args.addonsxml_path)
     addons = []
+
+    repo_addon_id = 'plugin.repo.{}.{}'.format(
+        args.repo_user,
+        args.repo_name,
+    )
+    repo_addon_link = ''
+
     for addon in tree.getroot():
         if not addon.tag == 'addon':
             continue
@@ -40,11 +47,16 @@ def main():
         addon_ver = addon.get('version')
         plugin_zip_link = 'datadir/{id}/{id}-{ver}.zip'.format(
             id=addon_id, ver=addon_ver)
-        addons.append(Addon(addon_id, addon_nm, plugin_zip_link))
+        addons.append(
+            Addon(addon_id, addon_nm, addon_ver, plugin_zip_link)
+        )
+        if repo_addon_id == addon_id:
+            repo_addon_link = plugin_zip_link
 
     addons_text = '\n'.join(
         [
-            '- [__{nm}__ ({id})]({link})'.format(id=a.id, nm=a.name, link=a.zip)
+            '- [__{nm}__]({link}) {id} v{ver}'.format(
+                id=a.id, nm=a.name, link=a.zip, ver=a.version)
             for a in addons
         ]
     )
@@ -52,10 +64,12 @@ def main():
     with open(args.template, 'r') as template_file, open(args.output, 'w') as output_file:
         template_string = template_file.read()
         output_file.write(template_string.format(
-            repo_name='{}/{}'.format(args.repo_user, args.repo_name),
+            repo_user=args.repo_user,
+            repo_name=args.repo_name,
             addons=addons_text,
             commitlink='[{commit}](https://github.com/{user}/{repo}/commit/{commit})'.format(
-                user=args.repo_user, repo=args.repo_name, commit=args.commit_hash)
+                user=args.repo_user, repo=args.repo_name, commit=args.commit_hash),
+            repo_addon_link=repo_addon_link,
         ))
 
 
