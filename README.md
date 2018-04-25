@@ -31,8 +31,7 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
     ```
     If successful, you will see 2 files ``deploy_key`` and ``deploy_key.pub`` in the folder.
 
-1. Copy the contents of ``deploy_key.pub`` to the project settings: ``https://github.com/<your name>/<your repo>/settings/keys``
-    - Remember to "allow write access"
+1. Copy the contents of the text file ``deploy_key.pub`` and set it as a new Deploy key for your project ``https://github.com/<your name>/<your repo>/settings/keys``. Remember to __allow write access__.
 
 1. [Install the travis CLI client](https://github.com/travis-ci/travis.rb#installation)
 
@@ -41,7 +40,7 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
     travis login
     ```
 
-1. Use ``travis`` to encrypt your deploy_key and put the encrypted key into ``.github/deploy_key.enc``
+1. Use ``travis`` to encrypt your ``deploy_key`` and save the encrypted key as ``.github/deploy_key.enc``
     ```bash
     # or go to where your repo folder is
     cd my_kodi_repo
@@ -49,7 +48,7 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
     ```
     You should see something like
     ```
-    encrypting deploy_key for domenic/travis-encrypt-file-example
+    encrypting deploy_key for yourname/your-repo-project
     storing result as deploy_key.enc
     storing secure env variables for decryption
 
@@ -67,11 +66,11 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
 
 1. Take the encryption label from the previous step and set it in the file ``.travis.yml``. Take this chance to also set your email address in ``.travis.yml``
 
-1. Add your plugin folders into the ``src/`` folder so that it looks like
+1. Add your addon source code folders into the ``src/`` folder so that it looks like
     ```
     - src/
-        - your.plugin.folder.one/
-        - your.plugin.folder.two/
+        - your.addon.folder.one/
+        - your.addon.folder.two/
     ```
 
 1. Git add your changes and new files and push it to your repo.
