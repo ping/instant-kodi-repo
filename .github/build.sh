@@ -25,7 +25,7 @@ cd $CWD
 # Clean out existing contents
 rm -rf $BUILD_DIR/**/* || exit 0
 
-python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/"
+python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/" -t ".github/templates/repo.addon.xml.tmpl"
 
 # Do our repo build
 plugin_sources=''

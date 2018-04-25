@@ -67,4 +67,8 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
         - your.plugin.folder.two/
     ```
 
-1. Git your changes and new files added and push it to 
+1. Git your changes and new files added and push it to your repo.
+    ```
+    git add -A .
+    git push
+    ```
