@@ -23,7 +23,7 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
 cd $CWD
 # Clean out existing contents
-rm -rf $BUILD_DIR/**/* || exit 0
+rm -rf $BUILD_DIR/* || exit 0
 
 python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/" -t ".github/templates/repo.addon.xml.tmpl"
 
@@ -47,6 +47,9 @@ wget -O "$create_repository_py" "$create_repo_script_url" || curl -o "$create_re
 # the datadir/ path is also hardcoded in build_repo_addon.py
 mkdir -p "$BUILD_DIR/datadir/"
 python "$create_repository_py" -d "$BUILD_DIR/datadir/" -i "$BUILD_DIR/addons.xml" -c "$BUILD_DIR/addons.xml.md5" $plugin_sources
+
+# Generate readme.md
+python .github/build_readme.py "$REPO_USER" "$REPO_NAME" "$BUILD_DIR/addons.xml" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md"
 
 cd $BUILD_DIR
 git config user.name "Travis CI"
