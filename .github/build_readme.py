@@ -37,7 +37,7 @@ def main():
     tree = xml.etree.ElementTree.parse(args.addonsxml_path)
     addons = []
 
-    repo_addon_id = 'plugin.repo.{}.{}'.format(
+    repo_addon_id = 'repository.{}.{}'.format(
         args.repo_user,
         args.repo_name,
     )
