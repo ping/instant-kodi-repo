@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.repo.ping.instant-kodi-repo" name="ping/instant-kodi-repo Repository" provider-name="ping" version="1.0.0">
+<addons><addon id="repository.ping.instant-kodi-repo" name="ping/instant-kodi-repo Repository" provider-name="ping" version="1.0.0">
     <extension point="xbmc.addon.repository">
         <info>https://ping.github.io/instant-kodi-repo/addons.xml</info>
         <checksum>https://ping.github.io/instant-kodi-repo/addons.xml.md5</checksum>
