@@ -25,7 +25,7 @@ def main():
         print('Invalid template: {}'.format(args.template))
         sys.exit(1)
 
-    repo_addon_name = 'plugin.repo.{}.{}'.format(
+    repo_addon_name = 'repository.{}.{}'.format(
         args.repo_user,
         args.repo_name,
     )
