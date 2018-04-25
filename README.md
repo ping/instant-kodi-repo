@@ -2,6 +2,13 @@
 
 _Almost_ instant but not quite (/understatement)
 
+## Features
+- Auto generates your personal Kodi addon repository hosted on GitHub
+- Auto updates everytime you update your addon code
+- Auto generates a repository addon zip for your new personal repository
+
+[Demo](https://ping.github.io/instant-kodi-repo/)
+
 ## Get Started
 
 These instructions require you to have a bash environment and git installed. Most Linux and Mac machines will already have these available by default. For Windows, you probably should install the [Git for Windows](https://github.com/git-for-windows/git/releases) and run the commands from Git Bash.
@@ -67,8 +74,10 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
         - your.plugin.folder.two/
     ```
 
-1. Git your changes and new files added and push it to your repo.
+1. Git add your changes and new files and push it to your repo.
     ```
     git add -A .
     git push
     ```
+
+1. If nothing goes wrong, you will have a personal Kodi addon repository at ``https://your_user_name.github.io/your_repo_name/`` in a few minutes.
