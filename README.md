@@ -9,4 +9,4 @@ The following addons are available here:
 - [__ping/instant-kodi-repo Repository__](datadir/plugin.repo.ping.instant-kodi-repo/plugin.repo.ping.instant-kodi-repo-1.0.0.zip) plugin.repo.ping.instant-kodi-repo v1.0.0
 
 ----
-_Generated from [592b45c2ccbb57f1a8dfa2e8ae02caf983fb1a85](https://github.com/ping/instant-kodi-repo/commit/592b45c2ccbb57f1a8dfa2e8ae02caf983fb1a85)_
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``1bdc135``](https://github.com/ping/instant-kodi-repo/commit/1bdc1357fd58d8aacbe8b030201624e0829f73ca)
