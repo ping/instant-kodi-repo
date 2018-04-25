@@ -25,8 +25,8 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
 cd $CWD
 # Clean out existing contents
-rm -rf $BUILD_DIR/* || exit 0
-rm -rf $BUILD_DIR/.github || exit 0
+rm -rf $BUILD_DIR/* || exit 1
+rm -rf $BUILD_DIR/.github $BUILD_DIR/.travis.yml $BUILD_DIR/.gitignore || exit 1
 
 python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "src/" -t ".github/templates/repo.addon.xml.tmpl" -d "$DATADIR"
 
