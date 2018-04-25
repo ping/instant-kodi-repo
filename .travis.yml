@@ -1,0 +1,19 @@
+dist: trusty
+language: python
+
+python:
+  - "2.7"
+
+env:
+  global:
+    # !!! Replace the encryption label below with YOURS
+    - ENCRYPTION_LABEL: "e91d7cae23cf"
+    # !!! Replace the email below with YOURS
+    - COMMIT_AUTHOR_EMAIL: "ping@users.noreply.github.com"
+
+script:
+  - bash .github/build.sh
+
+branches:
+  only:
+    - master

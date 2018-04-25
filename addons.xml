@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="plugin.repo.ping.instant-kodi-repo" name="ping/instant-kodi-repo Repository" provider-name="ping" version="1.0.0">
+    <extension point="xbmc.addon.repository">
+        <info>https://ping.github.io/instant-kodi-repo/addons.xml</info>
+        <checksum>https://ping.github.io/instant-kodi-repo/addons.xml.md5</checksum>
+        <datadir zip="true">https://ping.github.io/instant-kodi-repo/datadir/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/ping/instant-kodi-repo</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon />
+            <fanart />
+        </assets>
+    </extension>
+</addon></addons>
