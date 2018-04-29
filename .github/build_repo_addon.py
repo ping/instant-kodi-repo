@@ -1,6 +1,15 @@
 import argparse
 import os
 import sys
+import json
+
+DIR_INFO_TEMPLATE = '''
+        <dir minversion="{minversion}">
+            <info compressed="false">{addon_url}</info>
+            <checksum>{checksum_url}</checksum>
+            <datadir zip="true">{datadir_url}</datadir>
+        </dir>
+'''
 
 
 def main():
@@ -12,8 +21,11 @@ def main():
         '--template', '-t', default='templates/repo.addon.xml.tmpl',
         help='Path to the addon.xml template file')
     parser.add_argument(
+        '--config', '-c', default='config.json',
+        help='Path to config.json')
+    parser.add_argument(
         '--datadir', '-d', default='datadir',
-        help='datadir path for the repo')
+        help='path to datadir')
 
     args = parser.parse_args()
 
@@ -23,6 +35,10 @@ def main():
 
     if not os.path.isfile(args.template):
         print('Invalid template: {}'.format(args.template))
+        sys.exit(1)
+
+    if not os.path.isfile(args.config):
+        print('Invalid config: {}'.format(args.config))
         sys.exit(1)
 
     repo_addon_name = 'repository.{}.{}'.format(
@@ -37,19 +53,29 @@ def main():
     os.mkdir(repo_addon_src)
     output_file = os.path.join(repo_addon_src, 'addon.xml')
 
-    with open(args.template, 'r') as template_file, open(output_file, 'w') as output_file:
+    with open(args.template, 'r') as template_file, \
+            open(args.config, 'r') as config_file, \
+            open(output_file, 'w') as output:
+        config = json.load(config_file)
+        branches = config.get('branchmap', [])
+        dir_info = ''
+        for b in branches:
+            dir_info = dir_info + DIR_INFO_TEMPLATE.format(
+                minversion=b['minversion'],
+                addon_url='https://{}.github.io/{}/{}/addons.xml'.format(
+                    args.repo_user, args.repo_name, b['name']),
+                checksum_url='https://{}.github.io/{}/{}/addons.xml.md5'.format(
+                    args.repo_user, args.repo_name, b['name']),
+                datadir_url='https://{}.github.io/{}/{}/{}/'.format(
+                    args.repo_user, args.repo_name, b['name'], args.datadir)
+            )
         template_string = template_file.read()
-        output_file.write(template_string.format(
+        output.write(template_string.format(
             repo_addon_id=repo_addon_name,
             repo_addon_name='{}/{} Repository'.format(args.repo_user, args.repo_name),
             repo_addon_provider=args.repo_user,
             repo_addon_version='1.0.0',
-            repo_info_url='https://{}.github.io/{}/addons.xml'.format(
-                args.repo_user, args.repo_name),
-            repo_info_checksum_url='https://{}.github.io/{}/addons.xml.md5'.format(
-                args.repo_user, args.repo_name),
-            repo_info_datadir_url='https://{}.github.io/{}/{}/'.format(
-                args.repo_user, args.repo_name, args.datadir),
+            repo_dir=dir_info,
             repo_addon_summary='A personal Kodi addon repository from https://github.com/{}/{}'.format(
                 args.repo_user, args.repo_name)
         ))
