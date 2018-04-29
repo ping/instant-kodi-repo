@@ -1,2 +1,53 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons />
+<addons><addon id="repository.ping.instant-kodi-repo" name="ping/instant-kodi-repo Repository" provider-name="ping" version="1.0.0">
+    <extension point="xbmc.addon.repository">
+        
+        <dir minversion="17.0.0">
+            <info compressed="false">https://ping.github.io/instant-kodi-repo/master/addons.xml</info>
+            <checksum>https://ping.github.io/instant-kodi-repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://ping.github.io/instant-kodi-repo/master/datadir/</datadir>
+        </dir>
+
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/ping/instant-kodi-repo</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon />
+            <fanart />
+        </assets>
+    </extension>
+</addon><addon id="script.hello.world" name="Hello World" provider-name="zag" version="1.0.1">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0" />
+	</requires>
+	<extension library="addon.py" point="xbmc.python.script">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Popup Hello World</summary>
+		<description lang="en">Example Script to show hello world</description>
+		<license>GNU General Public License, v2</license>
+		<language />
+		<forum>http://forum.kodi.tv/showthread.php?tid=209948</forum>
+		<source>https://github.com/zag2me/script.hello.world</source>
+		<website>Kodi.tv</website>
+		<email>zag@kodi.org</email>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>Updated the addon to use new addon.xml metadata</news>
+	</extension>
+</addon></addons>

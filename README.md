@@ -1,12 +1,13 @@
 # ping/instant-kodi-repo Kodi Addon Repository
 
-Download the [repository addon zip]() to install.
+Download the [repository addon zip](master/datadir/repository.ping.instant-kodi-repo/repository.ping.instant-kodi-repo-1.0.0.zip) to install.
 
 The following addons are available here:
 
 [__master__](master/addons.xml):
 
-
+- [__ping/instant-kodi-repo Repository__](master/datadir/repository.ping.instant-kodi-repo/repository.ping.instant-kodi-repo-1.0.0.zip) repository.ping.instant-kodi-repo v1.0.0
+- [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``59606fd``](https://github.com/ping/instant-kodi-repo/commit/59606fd4e6d075ca578c2456a1e38330e3fc33f2)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``37f254c``](https://github.com/ping/instant-kodi-repo/commit/37f254c59f418842fb24aa37740bd827a1701361)
