@@ -32,7 +32,7 @@ rm -rf $BUILD_DIR/.github $BUILD_DIR/.travis.yml $BUILD_DIR/.gitignore || exit 1
 # Download create_repository.py
 create_repo_script_url='https://raw.githubusercontent.com/chadparry/kodi-repository.chad.parry.org/master/tools/create_repository.py'
 create_repository_py='.github/create_repository.py'
-wget -t 2 -O "$create_repository_py" "$create_repo_script_url" || curl --retry 2 -o "$create_repository_py" "$create_repo_script_url"
+wget -q -t 2 -O "$create_repository_py" "$create_repo_script_url" || curl --retry 2 -o "$create_repository_py" "$create_repo_script_url"
 
 # Download jq
 jq_url='https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64'
@@ -55,7 +55,7 @@ for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
 
     # Do our repo build
     plugin_sources=''
-    for d in "$SOURCES_DIR/$name/src/*" ; do
+    for d in "$SOURCES_DIR/$name/src/"* ; do
         if [ -d "$d" ]; then
             if [ ! -z "$plugin_sources" ]; then
                 # Append a space
