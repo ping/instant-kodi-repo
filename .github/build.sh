@@ -45,8 +45,8 @@ chmod +x "$jq_path"
 #   - repo addon will include all the branches
 # - Generate a repo set of addons.xml, addons.xml.md5 etc for each branch
 for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
-    name=$(echo "$b" | .github/j -r '.name')
-    minversion=$(echo "$b" | .github/j -r '.minversion')
+    name=$(echo "$b" | .github/jq -r '.name')
+    minversion=$(echo "$b" | .github/jq -r '.minversion')
     mkdir -p "$SOURCES_DIR/$name" "$SOURCES_DIR/$datadir"
 
     git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
