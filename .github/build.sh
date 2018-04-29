@@ -70,7 +70,7 @@ for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
 done
 
 # Generate readme.md
-python .github/build_readme.py "$REPO_USER" "$REPO_NAME" ".github/config.json" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md" -d "$DATADIR"
+python .github/build_readme.py "$REPO_USER" "$REPO_NAME" ".github/config.json" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md" -d "$DATADIR" -b "$BUILD_DIR"
 
 cd $BUILD_DIR
 git config user.name "Travis CI"
