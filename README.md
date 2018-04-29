@@ -83,3 +83,48 @@ These instructions will be a 100x easier if you have a basic understanding of Gi
     ```
 
 1. If nothing goes wrong, you will have a personal Kodi addon repository at ``https://your_user_name.github.io/your_repo_name/`` in a few minutes.
+
+
+## Advance Usage
+
+By default, only the ``master`` branch is built to create an addons repository compatible with Krypton (minversion="17.0.0").
+
+You can change this by customising ``.github/config.json`` and ``.travis.yml``.
+
+For example, to make your repo only for Leia, edit ``.github/config.json`` to look like
+```json
+{
+    "branchmap": [
+        {
+            "name": "master",
+            "minversion": "17.9.0"
+        }
+    ]
+}
+```
+
+If you have different branches for different Kodi versions:
+
+``.github/config.json``
+```json
+{
+    "branchmap": [
+        {
+            "name": "master",
+            "minversion": "17.9.0"
+        },
+        {
+            "name": "krypton",
+            "minversion": "17.0.0"
+        }
+    ]
+}
+```
+
+``.travis.yml``
+```yml
+branches:
+  only:
+    - master
+    - krypton
+```
