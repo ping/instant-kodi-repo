@@ -37,18 +37,18 @@ wget -t 2 -O "$create_repository_py" "$create_repo_script_url" || curl --retry 2
 # Download jq
 jq_url='https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64'
 jq_path='.github/jq'
-wget -t 2 -O "$jq_path" "$jq_url" || curl --retry 2 -o "$jq_path" "$jq_url"
+wget -q -t 2 -O "$jq_path" "$jq_url" || curl --retry 2 -o "$jq_path" "$jq_url"
 chmod +x "$jq_path"
 
 # Iterate through config.json and clone each branch
 # - Generate a repo addon for each branch
 #   - repo addon will include all the branches
 # - Generate a repo set of addons.xml, addons.xml.md5 etc for each branch
-for b in $(cat .github/config.json | ./jq -c .branchmap[]); do
-    name=$(echo "$b" | ./jq -r '.name')
-    minversion=$(echo "$b" | ./jq -r '.minversion')
+for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
+    name=$(echo "$b" | .github/j -r '.name')
+    minversion=$(echo "$b" | .github/j -r '.minversion')
     mkdir -p "$SOURCES_DIR/$name" "$SOURCES_DIR/$datadir"
-    echo "$name $minversion $datadir"
+
     git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
 
     python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "$SOURCES_DIR/$name/src/" -t '.github/templates/repo.addon.xml.tmpl' -c '.github/config.json' -d "$DATADIR"
@@ -66,6 +66,7 @@ for b in $(cat .github/config.json | ./jq -c .branchmap[]); do
     done
     mkdir -p "$BUILD_DIR/$name/" "$BUILD_DIR/$name/$DATADIR/"
     python "$create_repository_py" -d "$BUILD_DIR/$name/$DATADIR/" -i "$BUILD_DIR/$name/addons.xml" -c "$BUILD_DIR/$name/addons.xml.md5" $plugin_sources
+
 done
 
 # Generate readme.md
