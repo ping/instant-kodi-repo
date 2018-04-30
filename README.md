@@ -2,7 +2,6 @@
 
 _Almost_ instant but not quite (/understatement)
 
-
 [![Travis](https://img.shields.io/travis/ping/instant-kodi-repo.svg?style=flat-square)](https://travis-ci.org/ping/instant-kodi-repo/)
 
 ## Features

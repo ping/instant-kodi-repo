@@ -4,6 +4,11 @@
 
 set -e
 
+if [ "$TRAVIS_PULL_REQUEST" != 'false' ]; then
+    # don't run for PRs
+    exit 0
+fi
+
 CWD=$(pwd)
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
