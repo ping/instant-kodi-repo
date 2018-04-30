@@ -2,6 +2,8 @@ import argparse
 import os
 import sys
 import json
+from shutil import copyfile
+
 
 DIR_INFO_TEMPLATE = '''
         <dir minversion="{minversion}">
@@ -21,6 +23,9 @@ def main():
         '--template', '-t', default='templates/repo.addon.xml.tmpl',
         help='Path to the addon.xml template file')
     parser.add_argument(
+        '--icon', '-i', default='templates/icon.png',
+        help='Path to the icon.png file')
+    parser.add_argument(
         '--config', '-c', default='config.json',
         help='Path to config.json')
     parser.add_argument(
@@ -35,6 +40,10 @@ def main():
 
     if not os.path.isfile(args.template):
         print('Invalid template: {}'.format(args.template))
+        sys.exit(1)
+
+    if not os.path.isfile(args.icon):
+        print('Invalid icon: {}'.format(args.icon))
         sys.exit(1)
 
     if not os.path.isfile(args.config):
@@ -52,6 +61,9 @@ def main():
 
     os.mkdir(repo_addon_src)
     output_file = os.path.join(repo_addon_src, 'addon.xml')
+    os.mkdir(os.path.join(repo_addon_src, 'resources'))
+    icon_file = os.path.join(repo_addon_src, 'resources', 'icon.png')
+    copyfile(args.icon, icon_file)
 
     with open(args.template, 'r') as template_file, \
             open(args.config, 'r') as config_file, \
@@ -74,7 +86,7 @@ def main():
             repo_addon_id=repo_addon_name,
             repo_addon_name='{}/{} Repository'.format(args.repo_user, args.repo_name),
             repo_addon_provider=args.repo_user,
-            repo_addon_version='1.0.0',
+            repo_addon_version='1.0.1',
             repo_dir=dir_info,
             repo_addon_summary='A personal Kodi addon repository from https://github.com/{}/{}'.format(
                 args.repo_user, args.repo_name)

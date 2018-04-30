@@ -51,7 +51,7 @@ for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
 
     git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
 
-    python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "$SOURCES_DIR/$name/src/" -t '.github/templates/repo.addon.xml.tmpl' -c '.github/config.json' -d "$DATADIR"
+    python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "$SOURCES_DIR/$name/src/" -t '.github/templates/repo.addon.xml.tmpl' -c '.github/config.json' -d "$DATADIR" --icon '.github/templates/icon.png'
 
     # Do our repo build
     plugin_sources=''
