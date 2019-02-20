@@ -26,6 +26,9 @@ def main():
         '--icon', '-i', default='templates/icon.png',
         help='Path to the icon.png file')
     parser.add_argument(
+        '--fanart', '-f', default='templates/fanart.jpg',
+        help='Path to the fanart.jpg file')
+    parser.add_argument(
         '--config', '-c', default='config.json',
         help='Path to config.json')
     parser.add_argument(
@@ -64,6 +67,10 @@ def main():
     os.mkdir(os.path.join(repo_addon_src, 'resources'))
     icon_file = os.path.join(repo_addon_src, 'resources', 'icon.png')
     copyfile(args.icon, icon_file)
+    fanart_file = ''
+    if args.fanart and os.path.isfile(args.fanart):
+        fanart_file = os.path.join(repo_addon_src, 'resources', 'fanart.jpg')
+        copyfile(args.fanart, fanart_file)
 
     with open(args.template, 'r') as template_file, \
             open(args.config, 'r') as config_file, \
@@ -89,7 +96,8 @@ def main():
             repo_addon_version='1.0.1',
             repo_dir=dir_info,
             repo_addon_summary='A personal Kodi addon repository from https://github.com/{}/{}'.format(
-                args.repo_user, args.repo_name)
+                args.repo_user, args.repo_name),
+            fanart_file=fanart_file,
         ))
 
     print('Generated {}'.format(output_file))
