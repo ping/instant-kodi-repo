@@ -97,7 +97,7 @@ def main():
             repo_dir=dir_info,
             repo_addon_summary='A personal Kodi addon repository from https://github.com/{}/{}'.format(
                 args.repo_user, args.repo_name),
-            fanart_file=fanart_file,
+            fanart_file='resources/fanart.jpg' if fanart_file else '',
         ))
 
     print('Generated {}'.format(output_file))
