@@ -19,7 +19,7 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
-REPO_USER=$(echo "$TRAVIS_REPO_SLUG" | grep -Eo '^([^/]+)')
+REPO_USER=$(echo "$TRAVIS_REPO_SLUG" | grep -Eo '^([^/]+)' | awk '{print tolower($0)}')
 REPO_NAME=$(echo "$TRAVIS_REPO_SLUG" | grep -Eo '([^/]+)$')
 
 DATADIR='datadir'
