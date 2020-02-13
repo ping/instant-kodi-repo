@@ -6,7 +6,7 @@ python:
 
 env:
   global:
-    # !!! Replace the encryption label below with YOURS
+    # !!! Replace the encryption label below with YOURS generated
     - ENCRYPTION_LABEL: "be90c687bd7a"
     # !!! Replace the email below with YOURS
     - COMMIT_AUTHOR_EMAIL: "tvhk.master@gmail.com"
