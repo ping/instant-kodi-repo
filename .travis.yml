@@ -1,6 +1,3 @@
-before_install:
-  - openssl aes-256-cbc -K $encrypted_be90c687bd7a_key -iv $encrypted_be90c687bd7a_iv -in .github/deploy_key.enc -out deploy_key -d
-
 dist: trusty
 language: python
 
