@@ -31,7 +31,7 @@ VIDEOS = [
     },
     {
         'name': "now 直播台",
-        'thumb': 'https://gitcdn.link/repo/tvhk-dev/tvhk-kodi-repo/master/images/now_news_live_606.67x300_poster.jpg',
+        'thumb': 'https://raw.githubusercontent.com/tvhk-dev/tvhk-kodi-repo/master/images/now_news_live_606.67x300_poster.jpg',
         'video': 'https://dummy/now331.m3u8',
     },
     {
