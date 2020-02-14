@@ -59,11 +59,6 @@ VIDEOS = [
         'thumb': 'https://www.rthk.hk/assets/rthk/images/tv/player/500x281.jpg',
         'video': 'https://www.rthk.hk/feeds/dtt/rthktv32_https.m3u8',
     },
-    {
-        'name': "BBC",
-        'thumb': 'https://www.rthk.hk/assets/rthk/images/tv/player/500x281.jpg',
-        'video': 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8',
-    }
 ]
 
 
