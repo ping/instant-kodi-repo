@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.tvhk"
-       name="Hong Kong TV"
-       version="1.0"
-       provider-name="y2kbug">
-
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.tvhk" name="Hong Kong TV" version="1.0.1" provider-name="y2kbug">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.inputstreamhelper" version="0.3.4"/>
         <import addon="script.module.simplejson" version="3.16.1"/>
         <import addon="script.module.requests" version="2.22.0"/>
     </requires>
-
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
