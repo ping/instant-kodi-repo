@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.tvhk"
-       version="1.0"
        name="Hong Kong TV"
+       version="1.0"
        provider-name="y2kbug">
 
     <requires>
