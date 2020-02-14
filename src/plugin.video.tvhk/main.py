@@ -59,6 +59,11 @@ VIDEOS = [
         'thumb': 'https://www.rthk.hk/assets/rthk/images/tv/player/500x281.jpg',
         'video': 'https://www.rthk.hk/feeds/dtt/rthktv32_https.m3u8',
     },
+    {
+        'name': "BBC",
+        'thumb': 'https://www.rthk.hk/assets/rthk/images/tv/player/500x281.jpg',
+        'video': 'https://raw.githubusercontent.com/m3u8playlist/dp/master/live_tv/bbc.m3u',
+    }
 ]
 
 
