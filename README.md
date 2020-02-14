@@ -6,10 +6,10 @@ The following addons are available here:
 
 [__master__](master/addons.xml) (Kodi ver. 17.0.0):
 
-- [__Hong Kong TV__](master/datadir/plugin.video.tvhk/plugin.video.tvhk-0.9.1.zip) plugin.video.tvhk v0.9.1
+- [__Hong Kong TV__](master/datadir/plugin.video.tvhk/plugin.video.tvhk-0.9.2.zip) plugin.video.tvhk v0.9.2
 - [__tvmost__](master/datadir/plugin.video.tvmost/plugin.video.tvmost-0.0.1.zip) plugin.video.tvmost v0.0.1
 - [__tvhk-dev/tvhk-kodi-repo Repository__](master/datadir/repository.tvhk-dev.tvhk-kodi-repo/repository.tvhk-dev.tvhk-kodi-repo-1.0.1.zip) repository.tvhk-dev.tvhk-kodi-repo v1.0.1
 - [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``443e3b8``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/443e3b8373f97780a2323c7ababd0d6ee54db824)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``a62689b``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/a62689bb08db756c327dda6ee4c40a3ee3e24011)
