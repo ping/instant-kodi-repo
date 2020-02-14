@@ -12,4 +12,4 @@ The following addons are available here:
 - [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``75f2082``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/75f2082223770c47f6f1f4b1cacee06336fcd1a4)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``2494012``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/24940123205b9636e6819cff2e63308f8f2ccf59)
