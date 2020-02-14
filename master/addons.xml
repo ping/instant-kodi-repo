@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.ping.instant-kodi-repo" name="ping/instant-kodi-repo Repository" provider-name="ping" version="1.0.1">
+<addons><addon id="repository.tvhk-dev.tvhk-kodi-repo" name="tvhk-dev/tvhk-kodi-repo Repository" provider-name="tvhk-dev" version="1.0.1">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
-            <info compressed="false">https://ping.github.io/instant-kodi-repo/master/addons.xml</info>
-            <checksum>https://ping.github.io/instant-kodi-repo/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://ping.github.io/instant-kodi-repo/master/datadir/</datadir>
+            <info compressed="false">https://tvhk-dev.github.io/tvhk-kodi-repo/master/addons.xml</info>
+            <checksum>https://tvhk-dev.github.io/tvhk-kodi-repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://tvhk-dev.github.io/tvhk-kodi-repo/master/datadir/</datadir>
         </dir>
 
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/ping/instant-kodi-repo</summary>
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/tvhk-dev/tvhk-kodi-repo</summary>
         <description lang="en_GB" />
         <language />
         <platform>all</platform>
