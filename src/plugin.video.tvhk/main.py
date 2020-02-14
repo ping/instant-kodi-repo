@@ -26,7 +26,7 @@ VIDEOS = [
     },
     {
         'name': "now 新聞台",
-        'thumb': "https://gitcdn.link/repo/tvhk-dev/tvhk-kodi-repo/master/images/now_news_606.67x300_poster.jpg",
+        'thumb': 'https://gitcdn.link/repo/tvhk-dev/tvhk-kodi-repo/master/images/now_news_606.67x300_poster.jpg',
         'video': 'https://dummy/now332.m3u8',
     },
     {
