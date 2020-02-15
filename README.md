@@ -9,7 +9,6 @@ The following addons are available here:
 - [__TVHK Live HK TV Addon__](master/datadir/plugin.video.tvhk/plugin.video.tvhk-0.9.4.zip) plugin.video.tvhk v0.9.4
 - [__tvmost__](master/datadir/plugin.video.tvmost/plugin.video.tvmost-0.0.1.zip) plugin.video.tvmost v0.0.1
 - [__tvhk-dev/tvhk-kodi-repo Repository__](master/datadir/repository.tvhk-dev.tvhk-kodi-repo/repository.tvhk-dev.tvhk-kodi-repo-1.0.1.zip) repository.tvhk-dev.tvhk-kodi-repo v1.0.1
-- [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``5342597``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/53425972f9e4f9a933e6aee9aed660f1acac8ee3)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``89bc0b2``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/89bc0b20618334b633fd37b3527b80d49dddf3ce)
