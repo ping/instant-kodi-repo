@@ -1,3 +1,5 @@
+# A Kodi Addon Repository specically made for TVHK, based on the code from https://github.com/ping/instant-kodi-repo
+
 # Almost "Instant" Kodi Addon Repository
 
 _Almost_ instant but not quite (/understatement)

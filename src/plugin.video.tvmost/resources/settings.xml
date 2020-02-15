@@ -4,5 +4,5 @@
     <setting id="items_per_page" type="slider" label="32006" default="25" range="0,50" />
     <setting id="api_key" type="text" default="AIzaSyBA2elSSF9SihDar_5MtpGB3lyLwtUdhpU" visible="false"/>
     <setting id="channel_id" type="text" default="UCiJnCs2K5gP-DXnMxlstC9A" visible="false"/>
-    <setting id="tvshow_title" type="text" default="無記電視" visible="false"/>
+    <setting id="tvshow_title" type="text" default="毛記電視" visible="false"/>
 </settings>
