@@ -50,7 +50,7 @@
             <screenshot>resources/images/screenshot-4.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="repository.tvhk-dev.tvhk-kodi-repo" name="tvhk-dev/tvhk-kodi-repo Repository" provider-name="tvhk-dev" version="1.0.1">
+</addon><addon id="repository.tvhk-dev.tvhk-kodi-repo" name="tvhk-dev/tvhk-kodi-repo Repository" provider-name="tvhk-dev" version="1.0.1-rev">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
@@ -61,7 +61,7 @@
 
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/tvhk-dev/tvhk-kodi-repo</summary>
+        <summary lang="en_GB">A Kodi addon repository from https://github.com/tvhk-dev/tvhk-kodi-repo</summary>
         <description lang="en_GB" />
         <language />
         <platform>all</platform>
