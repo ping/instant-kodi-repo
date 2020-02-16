@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.tvmost" lang="zh_HK" name="毛記電視 tvmost Addon for TVHK in Kodi" version="0.0.1" provider-name="TVHK">
+<addon id="plugin.video.tvmost" name="tvmost Addon for TVHK in Kodi" version="0.0.1" provider-name="TVHK">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.routing" version="0.2.0"/>
