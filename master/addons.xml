@@ -15,13 +15,13 @@
         <description lang="en_GB">Live Hong Kong TV Channels of Hong Kong on Kodi</description>
         <disclaimer lang="en_GB">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
         <assets>
-            <icon>icon.png</icon>
+            <icon>tvhk_tvmost_logo_transparent_512px.png</icon>
             <fanart>fanart.jpg</fanart>
             <screenshot>resources\screenshot.png</screenshot>
         </assets>
         <news>Includes only free public channels</news>
     </extension>
-</addon><addon id="plugin.video.tvmost" name="tvmost" provider-name="FreedomHKG TV" version="0.0.1">
+</addon><addon id="plugin.video.tvmost" name="tvmost Addon for TVHK in Kodi" provider-name="TVHK" version="0.0.1">
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.routing" version="0.2.0" />
@@ -38,7 +38,7 @@
         <license>GPL-3.0</license>
         <forum>https://forum.kodi.tv/showthread.php?tid=319639</forum>
         <website>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</website>
-        <email>frankie.yuen@me.com</email>
+        <email>tvhk.master@gmail.com</email>
         <source>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</source>
         <news>Add live streams, fix issue on first installation if the youtube addon is not installed</news>
         <assets>

@@ -15,7 +15,7 @@
         <description lang="en_GB">Live Hong Kong TV Channels of Hong Kong on Kodi</description>
         <disclaimer lang="en_GB">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
         <assets>
-            <icon>icon.png</icon>
+            <icon>tvhk_tvmost_logo_transparent_512px.png</icon>
             <fanart>fanart.jpg</fanart>
             <screenshot>resources\screenshot.png</screenshot>
         </assets>
