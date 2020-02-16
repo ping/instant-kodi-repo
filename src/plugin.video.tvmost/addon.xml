@@ -11,8 +11,8 @@
 
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Addon for TVMost Channels from Youtube</summary>
-        <summary lang="zh_HK">毛記電視於2015年5月18號正式啟播，成為香港第一間無牌……呀唔係……係毛牌電視台，每日全天候Online 36小時為全港超過689萬廢青人口提供最優質的膠清網上電視服務。</summary>
-        <description lang="zh_HK">面向廣大無情網民，毛記電視不惜工本，斥資近四位數字，每日攝製超過1,200秒毛聊新聞、資訊、綜藝及戲劇節目，由於製作精良，內容充實，未開台已獲社會大眾廣泛認同，至今已勇奪多個國際獎項，包括「亞太區我最喜愛廢青電視台」、「全球最冇良心電視台」、「2046年度十大最低欣賞指數節目」等。</description>
+        <summary lang="zh-HK">毛記電視於2015年5月18號正式啟播，成為香港第一間無牌……呀唔係……係毛牌電視台，每日全天候Online 36小時為全港超過689萬廢青人口提供最優質的膠清網上電視服務。</summary>
+        <description lang="zh">面向廣大無情網民，毛記電視不惜工本，斥資近四位數字，每日攝製超過1,200秒毛聊新聞、資訊、綜藝及戲劇節目，由於製作精良，內容充實，未開台已獲社會大眾廣泛認同，至今已勇奪多個國際獎項，包括「亞太區我最喜愛廢青電視台」、「全球最冇良心電視台」、「2046年度十大最低欣賞指數節目」等。</description>
         <disclaimer lang="en">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
         <disclaimer lang="zh_HK">版權所有：毛記電視</disclaimer>
         <language>zh_HK</language>
