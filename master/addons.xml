@@ -45,14 +45,14 @@
         [Fix] add all metadata
         </news>
         <assets>
-            <icon>/resources/images/icon.png</icon>
-            <fanart>resources/images/fanart.jpg</fanart>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
             <banner />
-            <clearlogo>/resources/images/icon.png</clearlogo>
-            <screenshot>resources/images/screenshot-1.png</screenshot>
-            <screenshot>resources/images/screenshot-2.png</screenshot>
-            <screenshot>resources/images/screenshot-3.png</screenshot>
-            <screenshot>resources/images/screenshot-4.png</screenshot>
+            <clearlogo>icon.png</clearlogo>
+            <screenshot>screenshot-1.png</screenshot>
+            <screenshot>screenshot-2.png</screenshot>
+            <screenshot>screenshot-3.png</screenshot>
+            <screenshot>screenshot-4.png</screenshot>
         </assets>
     </extension>
 </addon><addon id="repository.tvhk-dev.tvhk-kodi-repo" name="tvhk-dev/tvhk-kodi-repo Repository" provider-name="tvhk-dev" version="1.0.1-rev">
