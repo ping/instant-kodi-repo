@@ -21,7 +21,7 @@
         </assets>
         <news>Includes only free public channels</news>
     </extension>
-</addon><addon id="plugin.video.tvmost" name="tvmost Addon for TVHK in Kodi" provider-name="TVHK" version="0.0.1">
+</addon><addon id="plugin.video.tvmost" name="tvmost Addon for TVHK in Kodi" provider-name="TVHK" version="0.0.2">
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.routing" version="0.2.0" />
