@@ -45,10 +45,10 @@
         [Fix] add all metadata
         </news>
         <assets>
-            <icon>icon.png</icon>
+            <icon>/resources/images/icon.png</icon>
             <fanart>resources/images/fanart.jpg</fanart>
             <banner />
-            <clearlogo>icon.png</clearlogo>
+            <clearlogo>/resources/images/icon.png</clearlogo>
             <screenshot>resources/images/screenshot-1.png</screenshot>
             <screenshot>resources/images/screenshot-2.png</screenshot>
             <screenshot>resources/images/screenshot-3.png</screenshot>
