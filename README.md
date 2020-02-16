@@ -11,4 +11,4 @@ The following addons are available here:
 - [__tvhk-dev/tvhk-kodi-repo Repository__](master/datadir/repository.tvhk-dev.tvhk-kodi-repo/repository.tvhk-dev.tvhk-kodi-repo-1.0.1-rev.zip) repository.tvhk-dev.tvhk-kodi-repo v1.0.1-rev
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``ead1800``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/ead1800a3637e3f74517d08ef83fa10cd9bdb768)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``5d890ff``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/5d890ffda9f05df5b2be4ac576803fb33c07a411)
