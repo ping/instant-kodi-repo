@@ -26,10 +26,10 @@
         [Fix] add all metadata
         </news>
         <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
+            <icon>resources\assets\tvhk_tvmost_logo_transparent_512px.png</icon>
+            <fanart>resources\assets\fanart.jpg</fanart>
             <banner></banner>
-            <clearlogo>icon.png</clearlogo>
+            <clearlogo>resources\assets\tvhk_tvmost_logo_transparent_512px.png</clearlogo>
             <screenshot>screenshot-1.png</screenshot>
             <screenshot>screenshot-2.png</screenshot>
             <screenshot>screenshot-3.png</screenshot>

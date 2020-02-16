@@ -1,11 +1,11 @@
 # Kodi Media Center language file
-# Addon Name: It's a Pixel THING
-# Addon id: plugin.video.itsapixelthing
-# Addon Provider: enen92
+# Addon Name: tvmost Addon for TVHK in Kodi
+# Addon id: plugin.video.tvmost
+# Addon Provider: tvhk
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"Report-Msgid-Bugs-To: tvhk.master@gmail.com\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
