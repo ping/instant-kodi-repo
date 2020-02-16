@@ -22,6 +22,8 @@
         <assets>
             <icon>resources/images/icon.png</icon>
             <fanart>resources/images/fanart.jpg</fanart>
+            <banner></banner>
+            <clearlogo>resources/images/icon.png</clearlogo>
             <screenshot>resources/images/screenshot-1.png</screenshot>
             <screenshot>resources/images/screenshot-2.png</screenshot>
             <screenshot>resources/images/screenshot-3.png</screenshot>
