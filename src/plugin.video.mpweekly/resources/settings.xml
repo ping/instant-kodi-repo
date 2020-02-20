@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="enter_all_videos" type="bool" label="32007" default="false" />
+    <setting id="items_per_page" type="slider" label="32006" default="25" range="0,50" />
+    <setting id="api_key" type="text" default="AIzaSyBmJpTd1qDlkciAV59heGLG-6vmhc4GQsA" visible="false"/>
+    <setting id="channel_id" type="text" default="UC_w7pV_Xz9XO0ChNFxMtV0w" visible="false"/>
+    <setting id="tvshow_title" type="text" default="MPWeekly明周" visible="false"/>
+</settings>
