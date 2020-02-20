@@ -21,6 +21,40 @@
         </assets>
         <news>Includes only free public channels</news>
     </extension>
+</addon><addon id="plugin.video.tvhkselect" name="TVHK Select Addon for TVHK in Kodi" provider-name="TVHK" version="0.0.1">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0" />
+        <import addon="script.module.routing" version="0.2.0" />
+        <import addon="script.module.requests" version="2.12.4" />
+    </requires>
+    <extension library="main.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Addon for TVHK Select Playlists from Youtube</summary>
+        <description lang="en">An addon to display staff selected videos available in YouTube</description>
+        <disclaimer lang="en">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=319639</forum>
+        <website>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</website>
+        <email>tvhk.master@gmail.com</email>
+        <source>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</source>
+        <news>v0.0.3
+        [Fix] add all metadata
+        </news>
+        <assets>
+            <icon>resources/assets/tvhkselect_logo_512px.jpg</icon>
+            <fanart>resources/assets/tvhk_fanart_1920x1080.jpg</fanart>
+            <banner />
+            <clearlogo>resources/assets/tvhkselect_logo_512px.png</clearlogo>
+            <screenshot>resources/assets/screenshot-1.png</screenshot>
+            <screenshot>resources/assets/screenshot-2.png</screenshot>
+            <screenshot>resources/assets/screenshot-3.png</screenshot>
+        </assets>
+    </extension>
 </addon><addon id="plugin.video.tvmost" name="tvmost Addon for TVHK in Kodi" provider-name="TVHK" version="0.0.3">
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
