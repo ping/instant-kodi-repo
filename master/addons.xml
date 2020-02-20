@@ -1,5 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.tvhk" name="TVHK Live HK TV Addon" provider-name="y2kbug / TVHK Team" version="0.9.4">
+<addons><addon id="plugin.video.mpweekly" name="MPWeekly Addon for TVHK in Kodi" provider-name="MPWeekly / TVHK" version="0.0.1">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0" />
+        <import addon="script.module.routing" version="0.2.0" />
+        <import addon="script.module.requests" version="2.12.4" />
+    </requires>
+    <extension library="main.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Addon for MPWeekly Channels from Youtube</summary>
+        <description lang="en">English dummy text</description>
+        <description lang="zh">過去五十多年以來，我們一直深入報導娛樂動向、名人專訪及生活資訊，真確呈現影、視、音樂與流行文化實況。同時，我們從人說到城巿，然後又從城巿回到人的所在。關於美學、藝術、設計、城市和日常，這裏有我們的看法。</description>
+        <disclaimer lang="en">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
+        <language>zh_HK</language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=319639</forum>
+        <website>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</website>
+        <email>tvhk.master@gmail.com</email>
+        <source>https://www.youtube.com/channel/UCiJnCs2K5gP-DXnMxlstC9A</source>
+        <news>v0.0.3
+        [Fix] add all metadata
+        </news>
+        <assets>
+            <icon>resources/assets/mpweekly_logo_512px.png</icon>
+            <fanart>resources/assets/fanart.jpg</fanart>
+            <banner />
+            <clearlogo>resources/assets/mpweekly_fanart_1920x1080.png</clearlogo>
+            <screenshot>resources/assets/screenshot-1.png</screenshot>
+            <screenshot>resources/assets/screenshot-2.png</screenshot>
+            <screenshot>resources/assets/screenshot-3.png</screenshot>
+        </assets>
+    </extension>
+</addon><addon id="plugin.video.tvhk" name="TVHK Live HK TV Addon" provider-name="y2kbug / TVHK Team" version="0.9.4">
     <requires>
         <import addon="xbmc.python" version="2.26.0" />
         <import addon="script.module.inputstreamhelper" version="0.3.4" />
