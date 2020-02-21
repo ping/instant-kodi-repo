@@ -24,7 +24,7 @@ def is_youtube_addon_installed():
             "jsonrpc": "2.0",
             "method": "Addons.GetAddonDetails",
             "params": {
-                "addonid": "plugin.video.youtube",
+                "addonid": "plugin.video.mpweekly",
                 "properties": ["installed"]
             },
             "id": 11
