@@ -2,7 +2,10 @@
 <settings>
     <setting id="enter_all_videos" type="bool" label="32007" default="false" />
     <setting id="items_per_page" type="slider" label="32006" default="25" range="0,50" />
-    <setting id="api_key" type="text" default="AIzaSyBA2elSSF9SihDar_5MtpGB3lyLwtUdhpU" visible="false"/>
     <setting id="channel_id" type="text" default="UC43uYVFECxblwYTZWUiWJ2A" visible="false"/>
     <setting id="tvshow_title" type="text" default="TVHK Select" visible="false"/>
+    <setting id="youtube.api.enable" value="true" />
+    <setting id="youtube.api.id" value="995873814406-8l8rraj4hfedt31ci0rtquhhuiuq6b2o.apps.googleusercontent.com" />
+    <setting id="youtube.api.key" value="AIzaSyBA2elSSF9SihDar_5MtpGB3lyLwtUdhpU" />
+    <setting id="youtube.api.secret" value="5kN19P3N_Ghq9Bkh3EO0TEmu" />
 </settings>
