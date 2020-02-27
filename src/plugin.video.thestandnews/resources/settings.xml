@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="enter_all_videos" type="bool" label="32007" default="false" />
+    <setting id="items_per_page" type="slider" label="32006" default="25" range="0,50" />
+    <setting id="api_key" type="text" default="AIzaSyDIthmCxrlm9Uxh9do3nSiTluBewJbG4D4" visible="false"/>
+    <setting id="channel_id" type="text" default="UCGe96mv2FcdfQXmtSXYF_fA" visible="false"/>
+    <setting id="tvshow_title" type="text" default="The Stand News 立場新聞" visible="false"/>
+</settings>

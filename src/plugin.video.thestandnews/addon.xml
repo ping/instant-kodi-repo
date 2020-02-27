@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.thestandnews" name="The Stand News Addon for TVHK in Kodi" version="0.0.1" provider-name="The Stand News / TVHK">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.routing" version="0.2.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_US">Addon for The Stand News Channels from Youtube</summary>
+        <summary lang="zh_TW">立場新聞在TVHK的點播頻度 Kodi Addon，片源來自立場新聞之Youtube頻道</summary>
+        <description lang="en_US">English dummy text</description>
+        <description lang="zh_TW">《立場新聞》編採方針獨立自主，致力守護民主、人權、自由、法治與公義等香港核心價值。</description>
+        <disclaimer lang="en_US">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
+        <language>zh_HK</language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum></forum>
+        <website>https://www.youtube.com/channel/UCGe96mv2FcdfQXmtSXYF_fA</website>
+        <email>tvhk.thestandnews@gmail.com</email>
+        <source>https://www.youtube.com/channel/UCGe96mv2FcdfQXmtSXYF_fA</source>
+        <news>v0.0.1
+        [New] Initial release
+        </news>
+        <assets>
+            <icon>resources/assets/thestandnews_logo_512px.png</icon>
+            <fanart>resources/assets/thestandnews_fanart_1920px.jpg</fanart>
+            <banner></banner>
+            <clearlogo>resources/assets/thestandnews_logo_512px.png</clearlogo>
+            <screenshot>resources/assets/thestandnews_screenshot-1.jpg</screenshot>
+            <screenshot>resources/assets/thestandnews_screenshot-2.jpg</screenshot>
+            <screenshot>resources/assets/thestandnews_screenshot-3.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
