@@ -15,6 +15,7 @@
         <description lang="en_US">English dummy text</description>
         <description lang="zh_TW">《立場新聞》編採方針獨立自主，致力守護民主、人權、自由、法治與公義等香港核心價值。</description>
         <disclaimer lang="en_US">All rights resvered to Channel owners. TVHK do not have any right of the channels and only presents what is available through the Internet into Kodi</disclaimer>
+        <disclaimer lang="en_TW">版權為立場新聞擁有</disclaimer>
         <language>zh_HK</language>
         <platform>all</platform>
         <license>GPL-3.0</license>
