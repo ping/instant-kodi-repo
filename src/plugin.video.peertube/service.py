@@ -1,8 +1,8 @@
-import libtorrent
 import time, sys
 import xbmc, xbmcvfs
 import AddonSignals
 from threading import Thread
+from python_libtorrent import libtorrent # changed to properly imported libtorrent
 
 class PeertubeDownloader(Thread):
     """
