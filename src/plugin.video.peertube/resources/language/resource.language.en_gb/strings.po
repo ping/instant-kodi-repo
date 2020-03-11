@@ -1,0 +1,39 @@
+# Kodi Media Center language file
+# Addon Name: Peertube
+# Addon id: plugin.video.peertube
+# Addon Provider: Cyrille Bollu
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Cyrille Bollu\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Settings (from 30000 to 30019)
+
+msgctxt "#30000"
+msgid "Preferred instance"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Number of videos to show per page"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Sort method to be used when listing videos"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Preferred video resolution"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Delete downloaded videos when Kodi exits"
+msgstr ""

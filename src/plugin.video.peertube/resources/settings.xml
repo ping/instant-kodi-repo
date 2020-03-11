@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="preferred_instance" type="text" default="https://framatube.org" label="30000"/>
+    <setting type="sep"/>
+    <setting id="items_per_page" type="select" values="10|20|50|100" default="20" label="30001"/>
+    <setting id="video_sort_method" type="select" values="likes|views" default='views' label="30002"/>
+    <setting id="preferred_resolution" type="select" values="1080|720|480|360|240" default='480' label="30003"/>
+    <setting type="sep"/>
+    <setting id="delete_files" type="bool" default="true" label="30004"/>
+</settings>
