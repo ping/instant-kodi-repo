@@ -48,7 +48,7 @@ class PeertubeAddon():
 
         # Nothing to play at initialisation
         self.play = 0
-        self.torrent_name = ''
+        self.torrent_f = ''
         
         return None
 
