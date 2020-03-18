@@ -48,7 +48,11 @@ class PeertubeAddon():
 
         # Nothing to play at initialisation
         self.play = 0
-        self.torrent_f = ''
+        self.torrent_name = ''
+
+        # filter= 'local' or 'all-local' in verb search rest api
+        # applied for browsing only
+        self.video_filter = addon.getSetting('video_filter')
         
         return None
 
@@ -148,7 +152,7 @@ class PeertubeAddon():
                   torrent_url = backup_url
 
                 # Compose the correct URL for Kodi
-                url = '{0}?action=play_video&url={1}'.format(self.plugin_url, torrent_url)
+                url = self.build_kodi_url_action_url('play_video', torrent_url)
             
             elif data_type == 'instances':
                 # TODO: Add a context menu to select instance as preferred instance
@@ -156,7 +160,7 @@ class PeertubeAddon():
                 list_item.setProperty('IsPlayable', 'false')
 
                 # Set URL to select this instance
-                url = '{0}?action=select_instance&url={1}'.format(self.plugin_url, data['host'])
+                url = self.build_kodi_url_action_url('select_instance',data['host'])
 
             # Add our item to the listing as a 3-element tuple.
             listing.append((url, list_item, False))
@@ -169,6 +173,17 @@ class PeertubeAddon():
             listing.append((url, list_item, True))
 
         return listing
+
+    def build_peertube_rest_api_search_request(self,search,start):
+        # Didn't yet find a correct way to do a search with a filter set to local.
+        # then if a search value is given it won't filter on local
+        if search is None:
+            # video api does not provide search=
+            req = '{0}/api/v1/videos?count={1}&start={2}&sort={3}&filter={4}'.format(self.selected_inst, self.items_per_page, start, self.sort_method,self.video_filter)
+        else:
+            # search api does not provide filter=
+            req = '{0}/api/v1/search/videos?count={1}&start={2}&sort={3}&search={4}'.format(self.selected_inst, self.items_per_page, start, self.sort_method,search)
+        return req
 
     def search_videos(self, start):
         """
@@ -185,7 +200,7 @@ class PeertubeAddon():
             return None
          
         # Create the PeerTube REST API request for searching videos
-        req = '{0}/api/v1/search/videos?search={1}&count={2}&start={3}&sort={4}'.format(self.selected_inst, search, self.items_per_page, start, self.sort_method)
+        req = self.build_peertube_rest_api_search_request(search,start)
 
         # Send the query
         results = self.query_peertube(req)
@@ -212,7 +227,7 @@ class PeertubeAddon():
         """
 
         # Create the PeerTube REST API request for listing videos
-        req = '{0}/api/v1/videos?count={1}&start={2}&sort={3}'.format(self.selected_inst, self.items_per_page, start, self.sort_method)
+        req = self.build_peertube_rest_api_search_request(None,start)
 
         # Send the query
         results = self.query_peertube(req)
@@ -309,6 +324,14 @@ class PeertubeAddon():
 
         return None
 
+    def build_kodi_url_action_url(self,action,url):
+        url = '{0}?action={1}&url={2}'.format(self.plugin_url,action,url)
+        return url
+
+    def build_kodi_url_action(self,action):
+        url = '{0}?action={1}&start=0'.format(self.plugin_url,action)
+        return url
+
     def main_menu(self):
         """
         Addon's main menu
@@ -321,17 +344,17 @@ class PeertubeAddon():
 
         # 1st menu entry
         list_item = xbmcgui.ListItem(label='Browse selected instance')
-        url = '{0}?action=browse_videos&start=0'.format(self.plugin_url)
+        url = self.build_kodi_url_action('browse_videos')
         listing.append((url, list_item, True))
 
         # 2nd menu entry
         list_item = xbmcgui.ListItem(label='Search on selected instance')
-        url = '{0}?action=search_videos&start=0'.format(self.plugin_url)
+        url = self.build_kodi_url_action('search_videos')
         listing.append((url, list_item, True))
 
         # 3rd menu entry
         list_item = xbmcgui.ListItem(label='Select other instance')
-        url = '{0}?action=browse_instances&start=0'.format(self.plugin_url)
+        url = self.build_kodi_url_action('browse_instances')
         listing.append((url, list_item, True))
 
         # Add our listing to Kodi.
@@ -356,19 +379,20 @@ class PeertubeAddon():
 
         # Check the parameters passed to the plugin
         if params:
-            if params['action'] == 'browse_videos':
+            action = params['action']
+            if action == 'browse_videos':
                 # Browse videos on selected instance
                 self.browse_videos(params['start'])
-            elif params['action'] == 'search_videos':
+            elif action == 'search_videos':
                 # Search for videos on selected instance
                 self.search_videos(params['start'])
-            elif params['action'] == 'browse_instances':
+            elif action == 'browse_instances':
                 # Browse peerTube instances
                 self.browse_instances(params['start'])
-            elif params['action'] == 'play_video':
+            elif action == 'play_video':
                 # Play video from provided URL.
                 self.play_video(params['url'])
-            elif params['action'] == 'select_instance':
+            elif action == 'select_instance':
                 self.select_instance(params['url'])
         else:
             # Display the addon's main menu when the plugin is called from Kodi UI without any parameters

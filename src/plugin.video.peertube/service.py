@@ -1,8 +1,10 @@
+# import libtorrent (Removed since library will be imported using a Kodi addon - best practice to maintain python binararies in Kodi)
 import time, sys
 import xbmc, xbmcvfs
 import AddonSignals
 from threading import Thread
-from python_libtorrent import libtorrent # changed to properly imported libtorrent
+from python_libtorrent import get_libtorrent
+libtorrent=get_libtorrent()
 
 class PeertubeDownloader(Thread):
     """
