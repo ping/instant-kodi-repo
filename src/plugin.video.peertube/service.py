@@ -4,7 +4,6 @@ import xbmc, xbmcvfs
 import AddonSignals
 from threading import Thread
 from python_libtorrent import get_libtorrent
-libtorrent=get_libtorrent()
 
 class PeertubeDownloader(Thread):
     """
