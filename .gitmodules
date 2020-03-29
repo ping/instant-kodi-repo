@@ -1,3 +1,6 @@
 [submodule "src/plugin.video.peertube"]
 	path = src/plugin.video.peertube
 	url = https://framagit.org/StCyr/plugin.video.peertube
+[submodule "plugin.video.peertube"]
+	path = plugin.video.peertube
+	url = https://framagit.org/csvke/plugin.video.peertube
