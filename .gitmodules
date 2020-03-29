@@ -4,3 +4,6 @@
 [submodule "plugin.video.peertube"]
 	path = plugin.video.peertube
 	url = https://framagit.org/csvke/plugin.video.peertube
+[submodule "src/--force"]
+	path = src/--force
+	url = https://framagit.org/csvke/plugin.video.peertube
