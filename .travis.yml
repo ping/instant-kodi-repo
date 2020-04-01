@@ -14,7 +14,7 @@ env:
 script:
   - bash .github/build.sh
 
-branches:
-  only:
-    - master
+# branches:
+#  only:
+#    - master
     # Add more branches if required
