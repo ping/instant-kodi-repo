@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.iptv.archive.downloader" version="0.2" name="IPTV Archive Downloader" provider-name="tbrek">
+<addon id="plugin.video.iptv.archive.downloader" version="0.2.0" name="IPTV Archive Downloader" provider-name="tbrek">
   <requires>
     <import addon="xbmc.python" version="2.2.0" />
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
@@ -44,12 +44,12 @@ IPTV providers close the streams in archive after 1h.
     <forum></forum>
     <language>en</language>
     <news>
-version 0.2
+version 0.2.0
 
 Added option to record timeframe from channel list
 
 
-version 0.1
+version 0.1.0
 
 Initial version.
     </news>
