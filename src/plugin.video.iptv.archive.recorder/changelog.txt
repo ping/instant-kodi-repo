@@ -1,0 +1,4 @@
+version 0.2
+- added option to record timeframe from list
+version 0.1
+- first release

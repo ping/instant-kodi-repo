@@ -1,8 +1,6 @@
 {
-    "branchmap": [
-        {
-            "name": "master",
-            "minversion": "17.0.0"
-        }
-    ]
+    "branchmap": [{
+        "name": "master",
+        "minversion": "18.0.0"
+    }]
 }

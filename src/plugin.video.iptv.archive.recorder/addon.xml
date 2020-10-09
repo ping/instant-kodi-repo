@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.iptv.archive.downloader" version="0.2" name="IPTV Archive Downloader" provider-name="tbrek">
+  <requires>
+    <import addon="xbmc.python" version="2.2.0" />
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.chardet" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.dateutil" />
+    <import addon="script.module.kodi-six" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="listDownload.py">
+        <label>Download using timeframe</label>
+        <visible>Window.isActive(tvchannels)</visible>
+      </item>
+      <item library="epgDownload.py">
+        <label>Download from Archive</label>
+        <visible>Window.isActive(tvguide)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.service" library="server.py" start="login"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Download from IPTV Simple Client with ffmpeg.</summary>
+    <description lang="en">
+Set your recording path and ffmpeg location and adjust timezone in M3U section.
+On Android ffmpeg will be copied to /data/data to be runnable.
+ffmpeg simply copies the stream into a transport stream container.
+
+By defult stream is splitted into 1h parts, then they're merged, as some
+IPTV providers close the streams in archive after 1h.
+
+    </description>
+    <disclaimer lang="en">Make sure recording streams is legal in your country.</disclaimer>
+    <source>https://github.com/tbrek/IPTV-Archive-Downloader</source>
+    <forum></forum>
+    <language>en</language>
+    <news>
+version 0.2
+
+Added option to record timeframe from channel list
+
+
+version 0.1
+
+Initial version.
+    </news>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/screenshots/screenshot-00.png</screenshot>
+      <screenshot>resources/screenshots/screenshot-01.png</screenshot>
+    </assets>
+  </extension>
+</addon>

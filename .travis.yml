@@ -7,9 +7,9 @@ python:
 env:
   global:
     # !!! Replace the encryption label below with YOURS
-    - ENCRYPTION_LABEL: "e91d7cae23cf"
+    - ENCRYPTION_LABEL: "189e52c2c347"
     # !!! Replace the email below with YOURS
-    - COMMIT_AUTHOR_EMAIL: "ping@users.noreply.github.com"
+    - COMMIT_AUTHOR_EMAIL: "me@tombrek.com"
 
 script:
   - bash .github/build.sh
