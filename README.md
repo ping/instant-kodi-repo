@@ -2,14 +2,14 @@
 
 _Almost_ instant but not quite (/understatement)
 
-[![Travis](https://img.shields.io/travis/ping/instant-kodi-repo.svg?style=flat-square)](https://travis-ci.org/ping/instant-kodi-repo/)
+[![Travis](https://img.shields.io/travis/tbrek/tbrek-kodi-repo.svg?style=flat-square)](https://travis-ci.org/tbrek/tbrek-kodi-repo/)
 
 ## Features
 - Auto generates your personal Kodi addon repository hosted on GitHub
 - Auto updates everytime you update your addon code
 - Auto generates a repository addon zip for your new personal repository
 
-[Demo](https://ping.github.io/instant-kodi-repo/)
+[Demo](https://tbrek.github.io/tbrek-kodi-repo/)
 
 ## Get Started
 
